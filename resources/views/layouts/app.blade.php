@@ -13,13 +13,13 @@
         <main class="pb-8">
             <div class="container mx-auto">
                 <div class="flex justify-between">
-                    <div class="w-32" style="max-width: 700px;">
+                    <div class="w-32 hidden lg:block" style="max-width: 700px;">
                         <x-sidebar-links></x-sidebar-links>
                     </div>
-                    <div class="flex-1 lg:mx-10">
+                    <div class="flex-1 lg:flex-auto lg:m-4 lg:mx-10">
                         @yield("content")
                     </div>
-                    <div class="w-1/6 bg-blue-200 rounded-lg p-4 h-fit">
+                    <div class="w-1/6 bg-blue-100 border border-blue-200 rounded-lg p-4 h-fit hidden lg:block">
                         <x-friends-list></x-friends-list>
                     </div>
                 </div>

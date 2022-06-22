@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="font-[Inter]">
+<body class="font-[Inter] min-h-screen">
 <div id="app">
     <x-navbar />
     @yield("content")

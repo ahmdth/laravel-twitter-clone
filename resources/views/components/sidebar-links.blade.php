@@ -1,4 +1,4 @@
-<ul>
+<ul class="hidden lg:block">
     <li>
         <a href="/tweets" class="font-bold text-lg block mb-4">Home</a>
     </li>

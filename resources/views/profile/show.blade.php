@@ -15,7 +15,7 @@
         </div>
         <div class="flex">
             @can("edit", $user)
-            <a class="border border-gray-300 rounded-2xl px-4 py-3 text-sm mr-4"
+            <a class="border border-gray-300 rounded-2xl px-4 py-3 text-sm"
                href="{{ route("profiles.edit", $user)}}">
                 Edit Profile
             </a>
@@ -24,7 +24,7 @@
                     @csrf
                     <button type="submit" style="background-color: #3b82f6;"
                             class="bg-blue-500 text-white rounded-2xl px-4 py-3 text-sm">
-                        {{ auth()->user()->following($user) ? "UnFollow":"Follow"}}
+                        {{ auth()->user()->following($user) ? "Unfollow":"Follow"}}
                     </button>
                 </form>
             @endif

@@ -1,4 +1,4 @@
-<nav class="container mx-auto py-4">
+<nav class="container mx-auto py-4 px-2">
     <div class="flex justify-between items-center">
         <a class="font-bold" href="{{ url('/') }}">
             <img class="w-10 h-10" src="{{ asset("images/twitter.svg") }}" alt="{{ config('app.name', 'Laravel') }}">
@@ -17,10 +17,9 @@
             </li>
             @endif
             @else
-            <li class="relative" x-data="{ open: false}">
+            <li class="relative" x-data="{ open: false}" @click.outside="open=false" @keydown.esc="open=false">
                 <button @click="open=!open"> {{ Auth::user()->name }} </button>
-{{--                <img src="{{ asset(Auth::user()->avatar) }}" alt="avatar" width="40" height="40" class="rounded-full"/>--}}
-                <div x-show="open" style="display: none" class="absolute right-2.5 p-2 bg-white shadow mt-2 rounded-md text-sm w-40">
+                <div x-show="open" style="display: none;width: 196px" class="absolute right-2.5 p-2 bg-white shadow mt-2 rounded-md text-sm">
                     <a class="w-full block px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white"
                         href="{{ route('profiles.show', Auth::user()) }}">Profile
                     </a>
@@ -29,7 +28,7 @@
                         {{ __('Logout') }}
                     </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                         @csrf
                     </form>
                 </div>

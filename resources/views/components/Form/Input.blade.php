@@ -1,10 +1,10 @@
 @props(['name', 'type'=>'text'])
-<div>
+<div class="w-full">
     <x-form.label :name="$name"/>
     <input
         id="{{ $name }}"
         type="{{ $type }}"
-        class="px-4 py-2 border rounded-lg w-full @error($name) border-red-500 @enderror"
+        class="px-4 py-2 border rounded-lg w-full border focus:outline-none focus:ring-2 @error($name) border-red-500 @enderror"
         name="{{ $name }}"
         {{ $attributes }}
     >
