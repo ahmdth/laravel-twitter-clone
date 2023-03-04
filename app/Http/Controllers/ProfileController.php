@@ -15,7 +15,7 @@ class ProfileController extends Controller
     {
         return view("profile.show", [
             'user' => $user,
-            'tweets' => $user->tweets
+            'tweets' => $user->tweets()->withLikes()->get()
         ]);
     }
 

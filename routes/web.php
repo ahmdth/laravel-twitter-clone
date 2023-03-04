@@ -7,9 +7,7 @@ use App\Http\Controllers\followController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ExploreController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Route::resource("tweets", TweetController::class)->only(["index", "store"]);
 Route::get("profiles/{user}", [ProfileController::class, "show"])->name("profiles.show");

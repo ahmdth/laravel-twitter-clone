@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-use App\Followable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Traits\Followable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -45,6 +44,7 @@ class User extends Authenticatable
         $ids = $this->follows->pluck("id");
         return Tweet::whereIn('user_id', $ids)
             ->orWhere('user_id', $this->id)
+            ->withLikes()
             ->latest()->get();
     }
 

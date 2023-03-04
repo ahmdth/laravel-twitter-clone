@@ -2,6 +2,6 @@
     @forelse($tweets as $tweet)
     <x-tweet :tweet="$tweet"></x-tweet>
     @empty
-    <p class="p-4">No tweets for yet?!</p>
+    <p class="p-4">No tweets for you!</p>
     @endforelse
 </div>

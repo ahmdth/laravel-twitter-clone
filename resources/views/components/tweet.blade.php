@@ -14,5 +14,15 @@
         <span
             class="text-xs text-gray-500 mb-4 block">{{ \Carbon\Carbon::make($tweet->created_at)->diffForHumans() }}</span>
         <p>{{ $tweet->body }}</p>
+        <div class="flex mt-3">
+            <div class="flex text-sm mr-2">
+                <x-like/>
+                <span>{{ $tweet->likes ?: 0 }}</span>
+            </div>
+            <div class="flex text-sm">
+                <x-dislike/>
+                <span>{{ $tweet->dislikes ?: 0 }}</span>
+            </div>
+        </div>
     </div>
 </div>
