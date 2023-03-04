@@ -88,6 +88,12 @@
   height: -moz-fit-content;
   height: fit-content;
 }
+.h-\[40px\] {
+  height: 40px;
+}
+.h-\[60px\] {
+  height: 60px;
+}
 .max-h-60 {
   max-height: 15rem;
 }
@@ -111,6 +117,12 @@
 }
 .w-1\/6 {
   width: 16.666667%;
+}
+.w-\[40px\] {
+  width: 40px;
+}
+.w-\[60px\] {
+  width: 60px;
 }
 .max-w-lg {
   max-width: 32rem;
@@ -229,6 +241,10 @@
 }
 .fill-current {
   fill: currentColor;
+}
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .p-6 {
   padding: 1.5rem;

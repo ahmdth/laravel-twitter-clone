@@ -24,7 +24,7 @@ class ProfileController extends Controller
         $this->authorize("edit", $user);
         return view("profile.edit",  [
             'user' => $user,
-            'tweets' => $user->tweets
+            'tweets' => $user->tweets()->withLikes()->get()
         ]);
     }
 
