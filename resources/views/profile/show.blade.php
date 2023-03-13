@@ -10,7 +10,7 @@
         </span>
         </div>
         <div class="relative">
-            <img src="{{ $user->avatar }}" alt=""
+            <img src="https://www.gravatar.com/avatar" alt=""
                  class="w-32 h-32 absolute rounded-full max-w-fit -top-24"/>
         </div>
         <div class="flex">

@@ -4,7 +4,7 @@
         @foreach(auth()->user()->follows as $user)
             <li class="mb-4 text-sm">
                 <a href="{{ route("profiles.show", $user) }}" class="flex items-center">
-                    <img src="{{ $user->avatar }}" alt="" class="w-12 h-12 rounded-full"/>
+                    <img src="https://www.gravatar.com/avatar" alt="" class="w-12 h-12 rounded-full"/>
                     <span class="ml-4">{{ $user->name }}</span>
                 </a>
             </li>
